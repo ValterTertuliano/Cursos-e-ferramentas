@@ -1,0 +1,10 @@
+{% include "global/inicio_blog.html" %}
+<h3> Usando context </h3>
+<p> Podemos criar contextos dentro da função render </p><br>
+<p>{% block texto %} {{ text }} {% endblock texto %}</p><br>
+
+{% block posts %}
+  {% for post in posts %}
+    {% include 'global/partial/postblock.html' %}
+  {% endfor %}
+{% endblock posts %}
