@@ -1,0 +1,3 @@
+Por recomendação do Professor Otavio Miranda, é sugerido 
+entender como funciona Sql, por esse motivo vou dar uma pausa 
+nessa seção e iniciar a seção de Sql.
