@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <h3>codigo-fonte</h3>
+    <p>O comando document.getElements é escrito em javascript, o problema disso é que as letras podem ficar muito juntas, confundindo a leitura <br></p>
+    <p>Podemos usar a tag &lt;code&gt; para resolver isso, deixando a fonte monoespaçada </p>
+    <p>exemplo: <mark><code>document.getElements("teste")</code></mark></p>
+    <br>
+    <p>Podemos usar o code para escrever codigos de exemplo em paginas</p>
+    <code>
+        for x in range(0, 100, 2):
+            print(x)
+
+    </code>
+    <p>mas apenas adicionar a tag &lt;code&gt; não vai deixar isso com o visual adequado, como acabamos de ver</p>
+    <p>para resolver isso podemos usar a tag &lt;pre&gt; que permite deixar o texto com a mesma formatação que está no html, isso é bem útil</p>
+    <p>exemplo:
+        
+        <pre>
+            <code>
+    <mark>for x in range(0, 100, 2):</mark>
+        <mark>print(x)</mark>
+            </code>
+        </pre>
+    
+        isso com certeza ajuda muito <br>
+    </p>
+    <h3>Citações</h3>
+    <p>Como disse o velho sabio: O computador é um burro muito muito rápido</p>
+    <p>podemos querer citar alguma coisa, usando aspas manualmente, ou usando a tag &lt;q&gt; para dar um significado melhor para a citação</p>
+    <p><q>Como disse o velho sabio:</q> O computador é um burro muito muito rápido</p>
+    <p>podemos usar a tag &lt;blockquote&gt; para citações mais longas</p>
+    <p><blockquote>Andrew Tannenbaum: Sistemas Operacionas 4° edição</blockquote>
+    Observe que a citação dentro do blockquote aparece deslocada, podemos usar o parametro cite para informar a referencia rela, link de site, ou sei lá o que</p>
+    <br>
+    <h3>Abreviações</h3>
+    <p>Podemos a tag  &lt;abbr&gt; em abreviações como no exemplo abaixo, mostrando um mini pop-up mostrando o significado da abreviação</p>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+    <br>
+    <h3>Texto invertido</h3>
+    <p>Podemos inverter alguns textos com a tag &lt;bdo&gt; e o parametro dir='rlt'</p>
+    <p>RTL significa righ to left ( da direita para esquerda )</p>
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+</body>
+</html>

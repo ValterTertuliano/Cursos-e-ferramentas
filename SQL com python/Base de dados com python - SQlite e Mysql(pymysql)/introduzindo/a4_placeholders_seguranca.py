@@ -36,13 +36,14 @@ tabela = (
 cursor.execute(tabela)
 
 # Registrando dados com execute do cursor
+# essa tecnica permite separar os dados dos comando sql
 sql = (
     f'INSERT INTO {TABLE_NAME}' 
-    '(id, name, peso) ' 
+    '(name, peso) ' 
     'VALUES ' 
-    '(NULL, "Valter Sérgio", 73.5)'
+    '(?, ?)'
 )
-cursor.execute(sql)  # aqui é executado apenas um registro
+cursor.execute(sql, ['Valter T', 65])  # aqui é executado apenas um registro
 
 sql_varios_dados = (
     f'INSERT INTO {TABLE_NAME} ' 
