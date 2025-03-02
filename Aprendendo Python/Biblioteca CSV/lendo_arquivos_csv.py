@@ -6,7 +6,7 @@ CAMINHO_CSV = Path(__file__).parent / 'arquivo_csv.csv'
 import csv
 
 print("\nExibindo no formato padrão\n")
-with open(CAMINHO_CSV, 'r') as arquivo:
+with open(CAMINHO_CSV, 'r', encoding='utf-8') as arquivo:
     
     # o reader retorna um objeto para ser interado 
     # o delimitador com virgula é para delimitar as colunas
@@ -19,7 +19,7 @@ with open(CAMINHO_CSV, 'r') as arquivo:
         print(linha)
 
 print("\nExibindo em formato chave-valor\n")
-with open(CAMINHO_CSV, 'r') as arquivo:
+with open(CAMINHO_CSV, 'r', encoding='utf-8') as arquivo:
     
     # o reader retorna um objeto para ser interado 
     # o delimitador com virgula é para delimitar as colunas
