@@ -5,7 +5,7 @@ import random
 import os
 
 DIRETORIO_RAIZ =    Path(__file__).parent
-BANCO_DE_DADOS = 'meusDados.sqlite3'
+BANCO_DE_DADOS = 'db.sqlite3'
 CAMINHO_DADOS = DIRETORIO_RAIZ / BANCO_DE_DADOS
 
 
