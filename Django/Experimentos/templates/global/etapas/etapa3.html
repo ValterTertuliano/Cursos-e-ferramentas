@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceira Etapa</title>
+</head>
+<body>
+    <h1>Terceira Etapa</h1>
+    <ol type="1">
+        <h3><li>Criando as rotas para as views</li></h3>
+        <hr>
+        <ol type="a">
+            <li>Criando arquivos <strong>urls.py</strong> dentro de cada app</li>
+            <ul>
+                <li>Dentro do arquivo <strong>pagina/urls.py</strong> importamos o módulo <strong>django.urls</strong> e chamamos a função <strong>path</strong>.</li>
+                <li>Importamos as views que queremos passar às rotas.</li>
+                <li>Usamos uma variável padrão do Django chamada <strong>urlpatterns</strong>, que recebe uma lista. Dentro dessa lista, chamamos a função <strong>path</strong>, que deve receber uma string com a rota desejada, conforme a <a href="https://docs.djangoproject.com/en/5.1/topics/http/urls/#:~:text=urlpatterns%20variable">documentação oficial</a>, e a função da view.</li>
+            </ul>
+            <hr>
+            <li>Definindo a <strong>URLconf</strong>.</li>
+            <ul>
+                <li>Na pasta do projeto principal <strong>praticando</strong>, no arquivo <strong>urls.py</strong>, devem ser incluídas as URLs das views.</li>
+                <li>Primeiro, no mesmo módulo padrão para <strong>path</strong>, chamamos a função <strong>include</strong>.</li>
+                <li>Observe que a lista <strong>urlpatterns</strong> está presente nesse arquivo e que já temos definida a rota <strong>admin</strong>.</li>
+                <li>Criamos a rota para a página inicial do site, usando uma string vazia para o primeiro parâmetro e logo em seguida utilizamos a função <strong>include</strong>, que recebe, em formato de string, o nome do app e o nome do arquivo <strong>urls</strong> → "pagina.urls".</li>
+                <li>Criamos também a rota para o app "etapas/", e passamos <strong>include</strong> como segundo parâmetro de <strong>path</strong> com "etapas.urls", garantindo o mapeamento correto das rotas.</li>
+            </ul>
+            <hr>
+        </ol>
+        <h3><li>Ativo os apps e confirmo o funcionamento</li></h3>
+        <hr>
+        <ol type="a">
+            <li>Na pasta do projeto, buscamos o arquivo <strong>settings.py</strong> e, dentro da lista armazenada na constante <strong>INSTALLED_APPS</strong>, adicionamos os nomes dos apps criados dentro de uma string, no caso <strong>pagina</strong> e <strong>etapas</strong>.</li>
+            <hr>
+            <li>Usamos o terminal shell para iniciar o servidor de teste.</li>
+            <p><strong>Usando os seguintes comandos:</strong></p>
+            <ul>
+                <li>CTRL + P</li>
+                <li>venv/Scripts/activate</li>
+                <li>python manage.py runserver</li>
+            </ul>
+            <hr>
+            <li>Acesso o navegador e, na barra de URL, escrevo: <strong>http://127.0.0.1:8000/</strong></li>
+            <ul>
+                <li>Testo a rota inicial</li> 
+                <li>E as rotas de etapas</li>
+                <li>http://127.0.0.1:8000/etapas/1</li>
+                <li>http://127.0.0.1:8000/etapas/2</li>
+                <li>http://127.0.0.1:8000/etapas/3</li>
+            </ul>
+        </ol>
+    </ol>
+</body>
+</html>

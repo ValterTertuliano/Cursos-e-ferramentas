@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda Etapa</title>
+</head>
+<body>
+    <h1>Segunda Etapa</h1>
+    <ol type="1">
+        <h3><li>Criei uma pasta global para todos os arquivos HTML</li></h3>
+        <hr>
+        <ol type="a">
+            <li>Criei uma pasta chamada templates</li>
+            <ul>
+                <li>Dentro de templates, criei uma pasta global.</li>
+                <li>Dentro de global, criei duas pastas, uma para cada app.</li>
+            </ul>
+            <hr>
+            <li>Criei um arquivo HTML na pasta global/pagina</li>
+            <ul>
+                <li>Esse arquivo, inicialmente, vai receber uma lista de tarefas/condições para a execução do projeto.</li>
+                <li>O arquivo se chama <strong>inicio.html</strong>.</li>
+            </ul>
+            <hr>
+            <li>Criei um arquivo HTML na pasta global/etapas</li>
+            <ul>
+                <li>Ele vai receber os arquivos HTML (texto informativo) do passo a passo de como cada parte está sendo executada.</li>
+                <li>Futuramente, haverá vários arquivos nomeados como <strong>etapa(n)</strong>, que representarão o total de etapas e conhecimentos aplicados no projeto.</li>
+            </ul>
+            <hr>
+            <li>Definindo a pasta templates como global no Django</li>
+            <ul>
+                <li>No arquivo <code>settings.py</code> do projeto "praticando", dentro da constante <code>TEMPLATES</code>, que é uma lista de dicionários, devemos configurar a chave <code>'DIRS'</code>, que recebe uma lista contendo <code>BASE_DIR / 'templates'</code>, indicando o diretório onde os templates estão armazenados.</li>
+            </ul>
+            <hr>
+        </ol>
+        <h3><li>Criei as Views de ambos os apps</li></h3>
+        <hr>
+        <ol type="a">
+            <li>Criei a view do app página</li>
+            <ul>
+                <li>Dentro do arquivo <strong>views.py</strong>, iniciei a função <mark style="background-color: aqua;">paginaInicial</mark>.</li>
+                <p>Ela recebe uma requisição (<strong>request</strong>) como parâmetro e retorna a função <strong><em>render</em></strong>, que precisa receber o que está sendo requisitado como primeiro parâmetro e o caminho do HTML que será renderizado, nesse caso -> <strong>global/pagina/inicio.html</strong>.</p>
+            </ul>
+            <hr>
+            <li>Criando a View do app etapas</li>
+            <ul>
+                <li>O processo é o mesmo da parte 2.a, porém com duas funções: <mark style="background-color: aqua;">etapa1</mark> e <mark style="background-color: aqua;">etapa2</mark>, além de quantas forem necessárias. O total de arquivos aumentará conforme a quantidade de passos. O caminho passado segue o seguinte padrão -> <strong>global/etapas/etapaX.html</strong> (onde X representa a etapa do processo com números crescentes).</li>
+            </ul>
+        </ol>
+    </ol>
+</body>
+</html>

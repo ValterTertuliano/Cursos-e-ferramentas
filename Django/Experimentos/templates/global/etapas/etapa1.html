@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Etapa</title>
+</head>
+<body>
+    <h1>Primeira Etapa do Projeto</h1>
+    <ol type="1" >
+        <h3><li>Instalação do framework DJANGO</li></h3>
+        <hr>
+        <ol type="a">
+            <li>Criei uma pasta (experimentos) para o projeto</li>
+            <hr>
+            <li>Iniciei um ambiente virtual para isolar as dependências necessárias</li>
+            <hr>
+            <strong>Comandos usados no processo:</strong>
+            <ul>
+                <li>python -m venv venv</li>
+                <li>venv/scripts/activate</li>
+            </ul>
+            <hr>
+            <li>Instalei o Django</li>
+            <hr>
+            <strong>Comandos usados no processo:</strong>
+            <ul>
+                <li>pip install django</li>
+            </ul>
+            <hr>
+            <li>Criei o documento requirements.txt</li>
+            <hr>
+            <strong>Comandos usados no processo:</strong>
+            <ul>
+                <li>pip freeze > requirements.txt</li>
+            </ul>
+        <hr>
+        </ol>
+        <h3><li>Esqueleto base do Projeto</li></h3>
+        <hr>
+        <ol type="a">
+            <li>Iniciei o projeto com o nome <strong>praticando</strong></li>
+            <hr>
+            <strong>Comandos usados no processo:</strong>
+            <ul>
+                <li>django-admin startproject praticando .</li>
+            </ul>
+        <hr>
+        <li>Iniciei o app <strong>pagina</strong> e <strong>etapas</strong></li>
+        <p>O objetivo é ter uma home com um menu de rotas aninhadas para cada parte do processo, e o app etapas deve gerenciar essas etapas (arquivo HTML como este).</p>
+        <hr>
+            <strong>Comandos usados no processo:</strong>
+            <ul>
+                <li>python manage.py startapp pagina</li>
+                <li>python manage.py startapp etapas</li>
+            </ul>
+        <hr>
+        </ol>
+    </ol>
+</body>
+</html>
