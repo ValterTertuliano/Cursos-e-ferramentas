@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br
-">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-</head>
+{% include "global/base/cabecalho.html" %}
 <body>
-    <h1>Página inicial</h1>
+    <h1>{{ titulo }}</h1>
     <ul>
         <h3>Lista de tarefas para essa pagina.</h3>
         <ol type="i">
@@ -23,5 +16,6 @@
         <li>Usar como guia a documentação e o material teorico do curso em video para o desenvolvimento com HTML e CSS</li>
         </ol>
     </ul>
+     
 </body>
 </html>

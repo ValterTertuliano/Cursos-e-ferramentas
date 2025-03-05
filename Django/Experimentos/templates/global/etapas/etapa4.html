@@ -1,0 +1,40 @@
+{% include "global/base/cabecalho.html" %}
+<body>
+    <h1>{{ titulo }}</h1>
+    <ol type="1">
+        <h3><li>Criando um menu de rotas dinâmicas</li></h3>
+        <hr>
+        <ol type="a">
+            <li>Criando uma pasta base no template/global</li>
+            <ul>
+                <li>Escrever código HTML para o menu de etapas.</li>
+                <li>Usar a tag <strong>include</strong> do Django.</li>
+                <p>Isso permite incluir o menu em todas as rotas das aplicações.<br>
+                Também possibilita adicionar um cabeçalho com formato padrão para todos os arquivos, evitando repetição de código.</p>
+            </ul>
+            <hr>
+            <li>Padronizando o projeto</li>
+            <ul>
+                <li>Criar um arquivo para o cabeçalho padrão.</li>
+                <li>Adicionar um contexto como terceiro parâmetro em todas as views.</li>
+                <p>Dentro do dicionário de contexto, adicionar apenas uma chave chamada "titulo" e definir seu valor como uma string que indica a etapa atual do projeto exibida.</p>
+            </ul>
+            <hr>
+            <li>Formatando o cabeçalho</li>
+            <ul>
+                <li>Configurar o idioma para <strong>pt-br</strong>.</li>
+                <li>Configurar o <strong>título da página</strong> usando a variável "titulo" dentro do contexto individual de cada view gerada.</li>
+                <li>Incluir o <strong>menu de navegação</strong> no cabeçalho.</li>
+            </ul>
+            <hr>
+            <li>Adicionando o cabeçalho padrão</li>
+            <ul>
+                <li>Incluir o cabeçalho em todos os arquivos.</li>
+                <p>Adicionar dentro da tag include do Django o caminho do arquivo → <strong>global/base/cabecalho.html</strong>.</p>
+                <li>Definir o título usando a tag de variável do Django chamando a variável <strong>titulo</strong> definida no contexto de cada view.</li>
+                <p>Isso permite alterar o título de cada página de forma dinâmica. Em qualquer parte do HTML, temos o head exibindo o título na parte superior da janela e também podemos definir a tag h1 com o mesmo nome.</p>
+            </ul>
+        </ol>
+    </ol>
+</body>
+</html>
